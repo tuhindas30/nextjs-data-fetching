@@ -1,18 +1,18 @@
 import mongoose from "mongoose";
 
-const MONGODB_URI = process.env.NEXT_PUBLIC_MONGODB_URI;
+const MONGODB_URI = process.env.MONGODB_URI;
 
-async function dbConnect() {
-  if (!MONGODB_URI) {
-    throw new Error("Please provide MONGODB_URI");
-  }
+if (!MONGODB_URI) {
+  throw new Error("Please provide MONGODB_URI");
+}
 
-  let cached = global.mongoose;
+let cached = global.mongoose;
 
-  if (!cached) {
-    cached = global.mongoose = { conn: null, promise: null };
-  }
+if (!cached) {
+  cached = global.mongoose = { conn: null, promise: null };
+}
 
+const dbConnect = async () => {
   if (cached.conn) {
     return cached.conn;
   }
@@ -29,11 +29,11 @@ async function dbConnect() {
         return mongoose;
       })
       .catch(() => {
-        throw new Error("Error connecting to MongoDB");
+        console.log("Error connecting to MongoDB");
       });
   }
   cached.conn = await cached.promise;
   return cached.conn;
-}
+};
 
 export default dbConnect;
