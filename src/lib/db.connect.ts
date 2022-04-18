@@ -28,8 +28,8 @@ const dbConnect = async () => {
         console.log("Successfully connected to MongoDB");
         return mongoose;
       })
-      .catch(() => {
-        console.log("Error connecting to MongoDB");
+      .catch((error) => {
+        console.log("Error connecting to MongoDB", error);
       });
   }
   cached.conn = await cached.promise;
