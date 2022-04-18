@@ -3,7 +3,7 @@ import { logError } from "./helper";
 const API_BASE_URL =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3000"
-    : "https://nextjs-data-fetch";
+    : "https://nextjs-data-fetch.vercel.app";
 
 const getAllTodos = async () => {
   try {
