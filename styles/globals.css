@@ -51,6 +51,7 @@ a {
 .description {
   padding-block: 1rem;
   text-align: center;
+  list-style: none;
 }
 
 .subTitle {

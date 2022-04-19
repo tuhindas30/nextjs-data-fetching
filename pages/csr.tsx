@@ -30,11 +30,12 @@ const SSR = () => {
       <BackToHome />
       <main className="main">
         <h1 className="title">Client Side Rendering</h1>
-        <p className="description">
-          This page is rendered on the client (browser).
-          <br />
-          Try updating the TODO list and it immediately gets updated.
-        </p>
+        <ul className="description">
+          <li>This page is rendered on the client (browser).</li>
+          <li>
+            Try disabling the javascript and notice the data is not fetched.
+          </li>
+        </ul>
         <Todo
           todos={todos}
           onAdd={(todos) => setTodos((state) => [...state, todos])}

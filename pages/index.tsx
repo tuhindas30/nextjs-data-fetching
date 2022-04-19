@@ -41,7 +41,7 @@ const Home: NextPage = () => {
             <Link href="/isr" passHref>
               <a className="card">
                 <h2>Incremental Static Regeneration</h2>
-                <p>This page rebuild itself after a specified time.</p>
+                <p>This page rebuild itself after any data update.</p>
               </a>
             </Link>
           </div>

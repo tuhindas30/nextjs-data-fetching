@@ -16,12 +16,14 @@ const SSR = ({ todos }: { todos: { _id: string; task: string }[] }) => {
       <BackToHome />
       <main className="main">
         <h1 className="title">Server Side Rendering</h1>
-        <p className="description">
-          This page is generated on the server on every request and then sent to
-          the client.
+        <ul className="description">
+          <li>This page is generated on the server on every request and then sent to
+          the client.</li>
+          <li>Try updating the TODO list and it immediately gets updated.</li>
+          
           <br />
-          Try updating the TODO list and it immediately gets updated.
-        </p>
+          
+        </ul>
         <Todo todos={todos} />
       </main>
     </div>

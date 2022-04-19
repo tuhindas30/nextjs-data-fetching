@@ -16,12 +16,13 @@ const SSG = ({ todos }: { todos: { _id: string; task: string }[] }) => {
       <BackToHome />
       <main className="main">
         <h1 className="title">Static Site Generation</h1>
-        <p className="description">
-          This page was generated statically at the time of build.
-          <br />
-          Try updating the TODO list and it won&apos;t get updated though
-          request is being made to the server.
-        </p>
+        <ul className="description">
+          <li>This page was generated statically at the time of build.</li>
+          <li>
+            Try updating the TODO list and it won&apos;t get updated though
+            request is being made to the server.
+          </li>
+        </ul>
         <Todo todos={todos} />
       </main>
     </div>

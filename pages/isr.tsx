@@ -16,13 +16,16 @@ const ISR = ({ todos }: { todos: { _id: string; task: string }[] }) => {
       <BackToHome />
       <main className="main">
         <h1 className="title">Incremental Static Regeneration</h1>
-        <p className="description">
-          This page was generated statically at the time of build. But this page
-          updates after every 3 seconds.
-          <br />
-          Try updating the TODO list and it won&apos;t get updated immediately.
-          Try to reload the page after 3 seconds and see the updated data.
-        </p>
+        <ul className="description">
+          <li>This page gets rebuild after any data update.</li>
+          <li>
+            Try updating the TODO list and it won&apos;t get updated
+            immediately.
+          </li>
+          <li>
+            Try to reload the page after few seconds and see the updated data.
+          </li>
+        </ul>
         <Todo todos={todos} />
       </main>
     </div>
